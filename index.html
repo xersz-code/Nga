@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game Mobile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Modal Input Nama & Leaderboard -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <h2>Masukkan Nama</h2>
+            <input type="text" id="playerName" placeholder="Nama player..." maxlength="20">
+            <button onclick="startWithName()">Mulai Game</button>
+            <div id="leaderboard">
+                <h3>Global High Score</h3>
+                <ul id="leaderboardList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div class="container" id="gameContainer" style="display: none;">
+        <div class="header">
+            <h1>Snake Game</h1>
+            <button class="control-btn reset-btn" onclick="resetGame()">Reset</button>
+        </div>
+        <p>Skor: <span id="score">0</span> | Nama: <span id="currentPlayer"></span></p>
+        <canvas id="gameCanvas" width="280" height="280"></canvas>
+        <div class="controls">
+            <div class="control-row">
+                <button class="control-btn" onclick="changeDirection('up')"><svg viewBox="0 0 24 24"><path d="M12 4l-8 8h16z"/></svg></button>
+            </div>
+            <div class="control-row">
+                <button class="control-btn" onclick="changeDirection('left')"><svg viewBox="0 0 24 24"><path d="M4 12l8-8v16z"/></svg></button>
+                <button class="control-btn" onclick="changeDirection('right')"><svg viewBox="0 0 24 24"><path d="M20 12l-8-8v16z"/></svg></button>
+            </div>
+            <div class="control-row">
+                <button class="control-btn" onclick="changeDirection('down')"><svg viewBox="0 0 24 24"><path d="M12 20l8-8H4z"/></svg></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
