@@ -7,7 +7,7 @@ const playerNameInput = document.getElementById('playerName');
 const currentPlayerDisplay = document.getElementById('currentPlayer');
 const leaderboardList = document.getElementById('leaderboardList');
 
-const WORKER_URL = 'https://snake-worker.your-subdomain.workers.dev'; // Ganti dengan URL Worker-mu
+const WORKER_URL = 'snake-worker.ayolahbisa13.workers.dev'; // Ganti dengan URL Worker-mu
 const gridSize = 20;
 const tileCount = 280 / gridSize;
 let snake = [{ x: 7, y: 7 }];
